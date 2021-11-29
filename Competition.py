@@ -44,6 +44,8 @@ recvThread.start()
 # CREATE FUNCTIONS HERE....
 
 def firsthoop():
+    sendmsg("forward 100")
+    sendmsg("up 50")
 
 """
 
