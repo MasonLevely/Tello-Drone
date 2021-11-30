@@ -1,7 +1,7 @@
 # Started from Tello Template
 # This Python app is in the Public domain
 # Some parts from Tello3.py
-
+# drone name D8DEC7
 import threading, socket, sys, time, subprocess
 
 
@@ -44,13 +44,15 @@ recvThread.start()
 # CREATE FUNCTIONS HERE....
 
 def firsthoop():
-    sendmsg("forward 200")
-    sendmsg("up 45")
+    sendmsg("forward 225")
+    sendmsg("up 30")
 
 
 
 def secondHoop():
     sendmsg("forward 300")
+    x = 10, 100
+    y = 10, 100
 
 """
 
