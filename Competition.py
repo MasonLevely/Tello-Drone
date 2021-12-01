@@ -44,15 +44,14 @@ recvThread.start()
 # CREATE FUNCTIONS HERE....
 
 def firsthoop():
-    sendmsg("forward 225")
+    sendmsg("forward 210")
     sendmsg("up 30")
 
 
 
 def secondHoop():
-    sendmsg("forward 300")
-    x = 10, 100
-    y = 10, 100
+    sendmsg("go 220 0 40 65")
+
 
 """
 
