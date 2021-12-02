@@ -44,7 +44,7 @@ recvThread.start()
 # CREATE FUNCTIONS HERE....
 
 def firsthoop():
-    sendmsg("forward 210")
+    sendmsg("forward 210", 9)
     sendmsg("up 30")
 
 
@@ -57,17 +57,19 @@ def secondHoop():
 
 
 def thirdHoop():
-    sendmsg("curve 100 100 10 30 250 10 60", 9)
+    sendmsg("curve 100 100 10 30 250 10 60", 10)
     sendmsg("ccw 180")
 
 
-"""
 
-# def fourthHoop():
 
-"""
+def fourthHoop():
+    sendmsg("forward 150")
+    sendmsg("go -220 0 40 65")
 
-print("\nLevely and Roundabush")
+
+
+print("\nLevely and Roudabush")
 print("Program Name: Hoop Competiton ")
 print("Date: 11.29.21 ")
 print("\n****CHECK YOUR TELLO WIFI ADDRESS****")
@@ -85,6 +87,7 @@ try:
         # firsthoop()
         # secondHoop()
         thirdHoop()
+        fourthHoop()
 
         sendmsg('land')
 
