@@ -30,7 +30,7 @@ def recv():
             break
 
 
-def sendmsg(msg, sleep = 6):
+def sendmsg(msg: object, sleep: object = 6) -> object:
     print("Sending: " + msg)
     msg = msg.encode(encoding="utf-8")
     sock.sendto(msg, tello_address)
@@ -49,6 +49,7 @@ def firsthoop():
 
 
 
+
 def secondHoop():
     sendmsg("go 220 0 40 65")
 
@@ -56,7 +57,8 @@ def secondHoop():
 
 
 def thirdHoop():
-    sendmsg("curve 100 100 10 30 250 10 60")
+    sendmsg("curve 100 100 10 30 250 10 60", 9)
+    sendmsg("ccw 180")
 
 
 """
@@ -80,8 +82,8 @@ try:
         sendmsg('command', 0)
         sendmsg('takeoff')
 
-        firsthoop()
-        secondHoop()
+        # firsthoop()
+        # secondHoop()
         thirdHoop()
 
         sendmsg('land')
