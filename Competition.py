@@ -51,21 +51,21 @@ def firsthoop():
 
 
 def secondHoop():
-    sendmsg("go 220 0 40 65")
+    sendmsg("go 220 0 40 65", 10)
 
 
 
 
 def thirdHoop():
     sendmsg("curve 100 100 10 30 250 10 60", 10)
-    sendmsg("ccw 180")
+    sendmsg("ccw 180", 6)
 
 
 
 
 def fourthHoop():
-    sendmsg("forward 150")
-    sendmsg("go -220 0 40 65")
+    sendmsg("forward 100")
+    sendmsg("go 220 0 -55 65")
 
 
 
@@ -84,8 +84,8 @@ try:
         sendmsg('command', 0)
         sendmsg('takeoff')
 
-        # firsthoop()
-        # secondHoop()
+        firsthoop()
+        secondHoop()
         thirdHoop()
         fourthHoop()
 
