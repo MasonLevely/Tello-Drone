@@ -1,7 +1,7 @@
 # Started from Tello Template
 # This Python app is in the Public domain
 # Some parts from Tello3.py
-# drone name D8DEC7
+
 import threading, socket, sys, time, subprocess
 
 
@@ -30,7 +30,7 @@ def recv():
             break
 
 
-def sendmsg(msg: object, sleep: object = 6) -> object:
+def sendmsg(msg, sleep = 6):
     print("Sending: " + msg)
     msg = msg.encode(encoding="utf-8")
     sock.sendto(msg, tello_address)
@@ -43,36 +43,10 @@ recvThread.start()
 
 # CREATE FUNCTIONS HERE....
 
-def firsthoop():
-    sendmsg("up 50")
-    sendmsg("forward 170", 10)
-    
 
-
-
-
-def secondHoop():
-    sendmsg("go 220 0 40 65", 10)
-
-
-"""
-
-def thirdHoop():
-    sendmsg("curve 100 100 10 30 250 10 60", 10)
-    sendmsg("ccw 180", 6)
-
-
-
-
-def fourthHoop():
-    sendmsg("forward 100")
-    sendmsg("go 220 0 -55 65")
-"""
-
-
-print("\nLevely and Roudabush")
-print("Program Name: Hoop Competiton ")
-print("Date: 11.29.21 ")
+print("\nFirst & Last Names")
+print("Program Name: ")
+print("Date: ")
 print("\n****CHECK YOUR TELLO WIFI ADDRESS****")
 print("\n****CHECK SURROUNDING AREA BEFORE FLIGHT****")
 ready = input('\nAre you ready to take flight: ')
@@ -85,8 +59,7 @@ try:
         sendmsg('command', 0)
         sendmsg('takeoff', 8)
 
-        firsthoop()
-        secondHoop()
+        sendmsg("forward 100")
 
         sendmsg('land')
 
